@@ -1,11 +1,16 @@
 class Solution {
 public:
     int climbStairs(int n) {
-        std::vector<int> v = {1, 2};
-        
+        if (n == 1){return 1;}
+        else if (n == 2){return 2;}
+        int prev =  1, curr = 2;
+        int step = 0;
         for (int i = 2; i < n; i++){
-            v.push_back(v[i-1]+v[i-2]);
+            step = prev + curr;
+            prev = curr;
+            curr = step;
+            
         }
-        return v[n-1];
+        return step;
     }
 };
