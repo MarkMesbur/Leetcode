@@ -1,8 +1,11 @@
 class Solution {
 public:
     int fib(int n) {
-        if (n == 0){return 0;}
-        else if (n == 1){return 1;}
-        return fib(n-1)+fib(n-2);
+        vector<int> v = {0,1};
+        
+        for (int i = 2; i <= n; i++){
+            v.push_back(v[i-1]+v[i-2]);
+        }
+        return v[n];
     }
 };
