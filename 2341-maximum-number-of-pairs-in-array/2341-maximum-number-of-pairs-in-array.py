@@ -4,8 +4,6 @@ class Solution:
         counts = Counter(nums)
         pairs = [0,0]
         for key, value in counts.items():
-            if value > 1:
-                pairs[0] += value // 2 
-            if value % 2 == 1:
-                pairs[1] += 1
+            pairs[0] += value // 2 
+            pairs[1] += value % 2
         return pairs
