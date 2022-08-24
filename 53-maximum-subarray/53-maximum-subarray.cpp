@@ -1,5 +1,3 @@
-#include <numeric>
-
 class Solution {
 public:
     int maxSubArray(vector<int>& nums) {
