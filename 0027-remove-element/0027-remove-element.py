@@ -4,7 +4,6 @@ class Solution:
         n = len(nums)
         while i < n:
             if nums[i] == val:
-                print(nums, n, i)
                 nums[i] = nums[n-1]
                 n -= 1
             else:
